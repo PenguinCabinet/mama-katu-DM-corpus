@@ -14,7 +14,7 @@
 * 送り元ユーザー名は「\_\_FROM\_USER\_\_」という記号に変換しています
 
 ## 追加方法
-1. in_conv.txtにママ活DMの内容を書き書き
+1. in_conv.txtに追加するママ活DMの内容を書き書き(一度の一つずつしか追加できません)
 2. python conv.pyを実行
 3. Mama_katu_DM_corpus.txtに追加されている
 
