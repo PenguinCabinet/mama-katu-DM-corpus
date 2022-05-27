@@ -1,4 +1,4 @@
-# ママ活勧誘DMコーパス
+# ママ活DMコーパス
 
 ## ダウンロード
 <a href="https://raw.githubusercontent.com/PenguinCabinet/mama-katu-DM-corpus/main/data.txt" download="Mama_katu_DM_corpus.txt">Mama_katu_DM_corpus.txt</a>
