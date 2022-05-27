@@ -1,2 +1,10 @@
-# mama-katu-DM-corpus
-The corpus of Japanese spams messages of invitation Mama Katu.
+# ママ活勧誘DMコーパス
+
+## 概要
+ママ活の勧誘のDMを集めてコーパスにしたものです。
+
+## 概要
+* 一行に一つのママ活DMのテキストです
+* 改行は「__BR__」という記号に変換しています
+* 送り先ユーザー名は「__TOUSER__」という記号に変換しています
+* 送り元ユーザー名は「__FROMUSER__」という記号に変換しています
