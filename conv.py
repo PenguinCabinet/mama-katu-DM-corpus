@@ -1,19 +1,22 @@
+#!/usr/bin/env python3
 
-text=""
-with open("in_conv.txt","r",encoding="utf-8") as f:
-    text=f.read()
+def main():
+    with open('in_conv.txt', 'rt', encoding='utf-8') as f:
+        datum = f.read().replace('\n', '__br__')
 
-text=text.replace("\n","__br__")
+    # load corpus without empty-line and remove '\n' char
+    with open('Mama_katu_DM_corpus.txt', 'rt', encoding='utf-8') as f:
+        corpus = [l.replace('\n', '') for l in f if not l.isspace()]
 
-out_text=""
-with open("Mama_katu_DM_corpus.txt","r",encoding="utf-8") as f:
-    for line in f:
-        if not line.isspace():
-            out_text+=line
+    if datum in corpus:
+        print('This datum already exists in the corpus.')
+        exit(1)
 
-if out_text=="" or out_text[len(out_text)-1]=="\n":
-    out_text+=text
-else:
-    out_text+="\n"+text
-with open("Mama_katu_DM_corpus.txt","w",encoding="utf-8") as f:
-    f.write(out_text)
+    corpus.append(datum)
+
+    # join corpus with '\n' and add line terminator for unix like systems
+    with open('Mama_katu_DM_corpus.txt', 'wt', encoding='utf-8') as f:
+        f.write('\n'.join(corpus) + '\n')
+
+if __name__ == '__main__':
+    main()
