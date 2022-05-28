@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
 import os
+import re
 
 def main():
     current = os.path.dirname(os.path.abspath(__file__))
 
+    # replace '\n' to '__br__' and apply strip for UX
     with open(os.path.join(current, 'in_conv.txt'), 'rt', encoding='utf-8') as f:
-        datum = f.read().replace('\n', '__br__')
+        datum = f.read().strip().replace('\n', '__br__')
 
     # load corpus without empty-line and remove '\n' char
     with open(os.path.join(current, 'Mama_katu_DM_corpus.txt'), 'rt', encoding='utf-8') as f:
