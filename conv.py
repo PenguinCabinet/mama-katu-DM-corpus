@@ -8,7 +8,7 @@ def main():
 
     # replace '\n' to '__br__' and apply strip for UX
     with open(os.path.join(current, 'in_conv.txt'), 'rt', encoding='utf-8', newline="\n") as f:
-        datum = f.read().strip().replace('\n', '__br__')
+        datum = f.read().strip().replace('\r\n', '\n').replace('\r', '\n').replace('\n', '__br__')
 
     # load corpus without empty-line and remove '\n' char
     with open(os.path.join(current, 'Mama_katu_DM_corpus.txt'), 'rt', encoding='utf-8', newline="\n") as f:
