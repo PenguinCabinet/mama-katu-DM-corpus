@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-import re
 
 def main():
     current = os.path.dirname(os.path.abspath(__file__))
